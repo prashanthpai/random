@@ -1,0 +1,35 @@
+[user]
+    name = Prashanth Pai
+    email = ppai@redhat.com
+[color]
+    pager = true
+    ui = true
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+[color "branch"]
+    current = magenta
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
+[core]
+    pager = less -FRSX
+    editor = vim -f
+[push]
+    default = current
+[github]
+    user = prashanthpai
+[alias]
+    s = status
+    me = !git config user.name && git config user.email
+    ll = log --graph --pretty=format:'%C(yellow)%h%C(auto)%d%Creset %s %C(white)- %an, %ar%Creset'
+    ls = log --stat
+    who = shortlog -sn
+    cm = checkout master
+    unstage = reset HEAD -
+    hier = log --all --graph --decorate --oneline --simplify-by-decoration
