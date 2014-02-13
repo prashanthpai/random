@@ -96,6 +96,8 @@ alias locate='sudo locate'
 alias pip="/usr/bin/pip-python"
 alias todo='vim /home/ppai/todo'
 alias hibernate='sudo systemctl hibernate'
+alias tf='tail -f'
+alias g='git'
 
 # Use vimx for X11-clipboard support
 if [ -e /usr/bin/vimx ];
@@ -112,6 +114,9 @@ alias vm2='ssh ppai@192.168.56.102'
 alias vm3='ssh ppai@192.168.56.103'
 
 ulimit -c unlimited
+
+# Enable git command completion
+source /etc/bash_completion.d/git
 
 ########## GlusterFS ###########
 alias pgl='ps auxww | grep gluster'
