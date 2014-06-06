@@ -15,6 +15,12 @@ function addtopath()
     fi
 }
 
+# Clear all *pyc files from dir recursively
+function cpyc()
+{
+    find $1 -name "*.pyc" -exec rm -rf {} \;
+}
+
 # Generic extract function
 function extract()      # Handy Extract Program
 {
@@ -107,6 +113,9 @@ fi
 
 export GREP_OPTIONS='--color=auto'
 export CSCOPE_EDITOR=vim
+
+# Tell python interpreter to not generate pyc or pyo files
+export PYTHONDONTWRITEBYTECODE=True
 
 # SSH and VM aliases
 alias vm1='ssh ppai@192.168.56.101'

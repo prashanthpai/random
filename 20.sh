@@ -5,7 +5,7 @@
 while :
 do
         sleep 20m
-        if (gnome-screensaver-command -q | grep -q "is inactive"); then
+        if (gnome-screensaver-command -q | grep -q "not"); then
                 notify-send -t 1000 "20-20-20" "Look away for 20 seconds"
         fi
         sleep 20s
